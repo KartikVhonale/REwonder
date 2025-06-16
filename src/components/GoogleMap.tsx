@@ -1,3 +1,4 @@
+import { env } from "process";
 import { useEffect, useRef, useState, useCallback } from "react";
 
 interface MapVendor {
@@ -29,7 +30,7 @@ interface GoogleMapProps {
 
 // Default center (New York City)
 const DEFAULT_CENTER = { lat: 40.7589, lng: -73.9851 };
-const API_KEY = "AIzaSyAmGYPkuILFBR0RRXokEaATaN5r2UdjiFw";
+const API_KEY = import.meta.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
 declare global {
   interface Window {

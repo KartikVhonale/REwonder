@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { env } from "process";
 
 interface MapVendor {
   id: string;
@@ -28,7 +29,7 @@ interface GoogleMapsProps {
   zoom?: number;
 }
 
-const API_KEY = "AIzaSyAmGYPkuILFBR0RRXokEaATaN5r2UdjiFw";
+const API_KEY = import.meta.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
 // Map component that will be rendered inside the wrapper
 const MapComponent: React.FC<GoogleMapsProps> = ({
