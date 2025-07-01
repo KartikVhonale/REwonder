@@ -121,7 +121,7 @@ const Index = () => {
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-brand-200 rounded-full px-4 py-2 mb-6 animate-fade-in">
               <TrendingUp className="w-4 h-4 text-brand-600" />
               <span className="text-sm font-medium text-brand-700">
-                Over 320 vendors and growing
+                Over x vendors and growing
               </span>
             </div>
 
